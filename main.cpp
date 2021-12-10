@@ -1,20 +1,19 @@
 #include <iostream>
 #include "lib.h"
+
 using namespace std;
 
 int main() {
-    int a=0;
-    float num=0;
-    cin>> a;
-    if (a<=0){
-        return 0;
+    int dim;
+    float max=0;
+    cin >> dim;
+    float a[dim];
+
+    for (int i=0;i<dim;i++){
+        float valore=0;
+        cin >> valore;
+        a[i]=valore;
     }
-   float numeri[a];
-    for (int i=0; i<a; i++){
-        num=0;
-        cin>> num;
-        numeri[1] = num;
-    }
-    cout<<maggiore(numeri,a)<<endl;
+    cout << maggiore (a,dim,max);
     return 0;
 }
