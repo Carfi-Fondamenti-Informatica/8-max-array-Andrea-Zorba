@@ -1,12 +1,13 @@
 #include "lib.h"
-using namespace std;
-float maggiore (float numeri[],int dim){
-    float b=0;
-    b=numeri [0];
-    for (int j=0; j<dim; j++){
-        if (b<numeri[j]){
-            b=numeri[j];
-        }
+
+float maggiore ( float a[], int dim, float max) {
+
+    for(int i=0; i<dim;i++){
+            if(i==0){
+                max=a[i];
+          } else if(i>0 and a[i]>max) {
+                max=a[i];
+            }
     }
-    return b;
+    return max;
 }
